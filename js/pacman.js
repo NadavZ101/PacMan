@@ -9,7 +9,7 @@ var gEatenGhosts = []
 // ---------------------------- createPacman ---------------------------- //
 
 function createPacman(board) {
-    // DONE: initialize gPacman...
+    // initialize gPacman...
     gPacman = {
         location: {
             i: 2,
@@ -78,11 +78,9 @@ function handleSuper() {
 // ---------------------------- eatGhosts ---------------------------- //
 
 function eatGhosts(ghostPos) {
-    console.log('eatGhosts - ghostPos = ', ghostPos)
 
     for (var i = 0; i < gGhosts.length; i++) {
         const ghostCurrPos = gGhosts[i].location // the ghost curr position
-        console.log('eatGhosts - ghostCurrPos = ', ghostCurrPos)
 
         //Pac pos is equal to ghost pos?
         if (ghostCurrPos.i === ghostPos.i && ghostCurrPos.j === ghostPos.j) {
@@ -95,8 +93,7 @@ function eatGhosts(ghostPos) {
 // ---------------------------- endSuperMode ---------------------------- //
 
 function endSuperMode() {
-    gPacman.isSuper = false;
-    console.log('gEatenGhosts ', gEatenGhosts);
+    gPacman.isSuper = false
 
     for (var i = 0; i < gEatenGhosts.length; i++) {
         const currGhost = gEatenGhosts[i]
